@@ -1,19 +1,18 @@
-
 public class IfTest02 {
 
 	public static void main(String[] args) {
 		int score = 83;
 		
 		if(score > 90){
-			System.out.println("AÇÐÁ¡");
+			System.out.println("Aí•™ì ");
 		}else if(score > 80){
-			System.out.println("BÇÐÁ¡");
+			System.out.println("Bí•™ì ");
 		}else if(score > 70){
-			System.out.println("BÇÐÁ¡");
+			System.out.println("Cí•™ì ");
 		}else if(score > 60){
-			System.out.println("BÇÐÁ¡");
+			System.out.println("Dí•™ì ");
 		}else{
-			System.out.println("FÇÐÁ¡");
+			System.out.println("Fí•™ì ");
 		}
 	}
 
