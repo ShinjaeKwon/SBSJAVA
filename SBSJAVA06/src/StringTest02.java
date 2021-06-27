@@ -1,39 +1,48 @@
-
 public class StringTest02 {
-
 	public static void main(String[] args) {
-		String str = "Hello, World!";
-		System.out.println(str.length());  //¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ¹İÈ¯
+		String str = "Hello, World!";		
+		System.out.println(str.length());
+		//int num = str.length();
+		//boolean myBool = str.length() > 0;
+		//if(str.length() > 0){}
 		
-		//substring ºÎºĞ ¹®ÀÚ¿­ ±¸ÇÏ±â : ¿øº» ¹®ÀÚ¿­¿¡¼­ ÀÏºÎ¸¦ Àß¶ó³»¼­ °¡Áö°í¿Â´Ù.
-		String str2 = str.substring(7);    //substring(index), index¹øÈ£ ´ÙÀ½ÀÎµ¦½º ºÎÅÍ ¹®ÀÚ¿­ÀÇ ³¡±îÁö Àß¶ó¼­ º¹»ç
+		// substring ë¶€ë¶„ë¬¸ìì—´ êµ¬í•˜ê¸° : ì›ë³¸ ë¬¸ìì—´ì—ì„œ ì¼ë¶€ë¥¼ ì˜ë¼ë‚´ì„œ ê°€ì§€ê³ ì˜´ 
+		String str2 = str.substring(7);	// 7ì¸ë±ìŠ¤ ì´í›„ ê¸€ìë¥¼ ë‹¤ ì§¤ë¼ì™€ë¼	
 		System.out.println(str2);
 		
-		//substringÀÇ ¿À¹ö·Îµù 
-		String str3	= str.substring(3,8);  //substring(index1, index2) , index1¹øÈ£ ºÎÅÍ index2¹Ù·Î ¾Õ ¹®ÀÚ±îÁö ¹®ÀÚ¿­ÀÇ Àß¶ó¼­ º¹»ç
+		String str3 = str.substring(3, 8); // 3ì¸ë±ìŠ¤ ë¬¸ìë¶€í„°, 8ì¸ë±ìŠ¤ ë°”ë¡œ ì• ë¬¸ìê¹Œì§€ ì§¤ë¼ì™€ë¼
 		System.out.println(str3);
 		
-		// String º¯¼ö¿¡´Â ¸Ş¸ğ¸® ÁÖ¼Ò°¡ ÀúÀåµÇ¾î ÀÖ´Ù.
-		// == ¿¬»êÀÚ¸¦ ÅëÇØ¼­ ÀúÀåµÈ ¹®ÀÚ¿­ÀÌ °°ÀºÁö ¿©ºÎ¸¦ °Ë»çÇÏ´Â °ÍÀº À§ÇèÇÏ´Ù.
-		String str4 ="Hello, World!";	  //new¸¦ »ç¿ëÇÏÁö ¾Ê°í ¹®ÀÚ¿­À» »ç¿ëÇÒ½Ã °°Àº °ø°£À» °¡¸®Å²´Ù, Áï ¸Ş¸ğ¸®ÁÖ¼Ò°¡ °°´Ù.
-		System.out.println(str == str4 ? "°°À½" : "´Ù¸§"); //¹®ÀÚ¿­³¢¸® == ¿¬»êÀÚ¸¦ »ç¿ë½Ã, ¸Ş¸ğ¸® °ø°£ÀÌ °°ÀºÁö È®ÀÎÇØ booleanÀ» ¹İÈ¯ÇÑ´Ù.
 		
-		String str5 = new String("Hello, World!");	//new¿¬»êÀÚ¸¦ ÀÌ¿ëÇØ ¹®ÀÚ¿­ »ı¼º½Ã ¹®ÀÚ¿­ÀÌ µ¿ÀÏÇØµµ ¸Ş¸ğ¸®°ø°£¿¡ ¸¸µé¾îÁö¹Ç·Î, ¸Ş¸ğ¸®ÀÇ ÁÖ¼Ò°¡ ´Ù¸£´Ù.
-		System.out.println(str == str5 ? "°°À½" : "´Ù¸§"); 
+		//  String ë³€ìˆ˜ì—ëŠ” ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ì €ì¥ë˜ì–´ ìˆìœ¼ë¯€ë¡œ
+		//  == ì—°ì‚°ìë¥¼ í†µí•´ì„œ ì €ì¥ëœ ë¬¸ìì—´ì´ ê°™ì€ì§€ ì—¬ë¶€ë¥¼ ê²€ì‚¬í•˜ëŠ” ê²ƒì€ ìœ„í—˜í•˜ë‹¤.
 		
-		if(str.equals("Hello, World!"))  //¹®ÀÚ¿­ÀÌ µ¿ÀÏÇÑÁö ºñ±³½Ã, .equals()¸¦ »ç¿ëÇÑ´Ù. ¸¸¾à ¹®ÀÚ¿­ÀÇ ³»¿ëÀÌ °°´Ù¸é, true¸¦ ¹İÈ¯ÇØÁÜ
-			System.out.println("strÀÌ °¡Áö°í ÀÖ´Â ¹®ÀÚ¿­Àº [Hello, World!]¹®ÀÚ¿­°ú µ¿ÀÏ"); 
+		String str4 = "Hello, World!";
+		System.out.println( str == str4 ? "ê°™ìŒ" : "ë‹¤ë¦„");
+		
+		String str5 = new String("Hello, World!");
+		System.out.println( str == str5 ? "ê°™ìŒ" : "ë‹¤ë¦„");
+		
+		if(str.equals("Hello, World!"))
+			System.out.println("strì´ ê°€ì§€ê³  ìˆëŠ” ë¬¸ìì—´ì€ [Hello, World!]ë¬¸ìì—´ê³¼ ë™ì¼");
 		
 		if("Hello, World!".equals(str))
-			System.out.println("[Hello, World!]¹®ÀÚ¿­Àº strÀÌ °¡Áö°í ÀÖ´Â ¹®ÀÚ¿­°ú µ¿ÀÏ");
+			System.out.println("[Hello, World!]ë¬¸ìì—´ì€ strì´ ê°€ì§€ê³  ìˆëŠ” ë¬¸ìì—´ê³¼ ë™ì¼");
 		
-		if(str.equals(str4)) System.out.println("str°ú str4´Â µ¿ÀÏÇÑ ¹®ÀÚ¿­ ÀúÀå");
-		if(str.equals(str5)) System.out.println("str°ú str5´Â µ¿ÀÏÇÑ ¹®ÀÚ¿­ ÀúÀå");
+		if(str.equals(str4))	System.out.println("strê³¼ str4ëŠ” ë™ì¼í•œ ë¬¸ìì—´ ì €ì¥");
+		if(str.equals(str5))	System.out.println("strê³¼ str5ëŠ” ë™ì¼í•œ ë¬¸ìì—´ ì €ì¥");
 		
-		//.¿¬»êÀÚ¸¦ »ç¿ëÇØ¼­ ¸Ş¼­µåÀÇ ¸®ÅÏµÇ´Â µ¥ÀÌÅÍ·Î ´Ù½Ã ´Ù¸¥ ¸Ş¼­µå¸¦ ¹Ù·Î ½ÇÇàÇÏ´Â ¹æ½Ä -> ¸Ş¼­µå Ã¼ÀÎ(Method Chain)
-		if(str.substring(0,5).equals("Hello")){
-			System.out.println("Hello ¹®ÀÚ¿­¸¸ Àß¶ó³Â½À´Ï´Ù.");
+		// . . . . ìœ¼ë¡œ í•´ì„œ ë©”ì„œë“œì˜ ë¦¬í„´ë˜ëŠ” ë°ì´í„°ë¡œ ë‹¤ì‹œ ë‹¤ë¥¸ ë©”ì„œë“œë¥¼ ë°”ë¡œ ì‹¤í–‰í•˜ëŠ” ë°©ì‹ -> ë©”ì„œë“œ ì²´ì¸ (Method Chain)
+		if(str.substring(0, 5).equals("Hello")){
+			System.out.println("Hello ë¬¸ìì—´ë§Œ ì˜ë¼ëƒˆìŠµë‹ˆë‹¤.");
 		}
+		/*
+		str.substring(0, 5)
+			.substring(0, 5)
+			.substring(0, 5)
+			.substring(0, 5)
+			.substring(0, 5)
+			.substring(0, 5);
+			*/
 	}
-
 }

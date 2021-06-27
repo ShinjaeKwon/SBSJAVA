@@ -1,32 +1,24 @@
-
 public class ReturnTest {
 
 	public static void main(String[] args) {
-			
-		PrimitiveReturn pReturn = new PrimitiveReturn();
-		int testResult = pReturn.add(10, 3);
-		System.out.println("pReturn.result : "+ pReturn.result);
-		System.out.println("testResult : "+testResult);
 		
+		PrimitiveReturn pReturn = new PrimitiveReturn();		
+		int testResult = pReturn.add(10, 3); // 13
+		System.out.println("pReturn.result : " + pReturn.result); // 13
+		System.out.println("testResult : " + testResult); // 13
 		testResult = 20;
-		System.out.println("º¯°æ ÈÄ pReturn.result : "+ pReturn.result);
-		System.out.println("º¯°æ ÈÄ testResult : "+testResult);
+		System.out.println("ë³€ê²½ í›„ pReturn.result : " + pReturn.result); // 13
+		System.out.println("ë³€ê²½ í›„ testResult : " + testResult); // 20
 		
-		System.out.println("################################################");
+		ReferenceReturn rReturn = new ReferenceReturn();		
+		int[] testResultArr = rReturn.makeArr(10, 3);
+		//                  = makeArr() ë©”ì„œë“œì•ˆì—ì„œ ìƒì„±í•œ result ê°ì²´ë¥¼ ë¦¬í„´ë°›ëŠ”ë‹¤.
+		//					= 0x100
 		
-		ReferenceReturn rReturn = new ReferenceReturn();
-		int[] testResultArr = rReturn.makeArr(10, 3);  //ÇÑ °ø°£À» °°ÀÌ °¡¸®Å°°í ÀÖ´Â »óÅÂ
-		
-		//makeArr() ¸Ş¼­µå¾È¿¡¼­ »ı¼ºÇÑ result °´Ã¼¸¦ ¸®ÅÏ
-		
-		
-		System.out.println("rReturn.result[0] : "+ rReturn.result[0]);
-		System.out.println("testResultArr[0] : "+testResultArr[0]);
-		testResultArr[0] = 30;
-		System.out.println("º¯°æ ÈÄ rReturn.result[0] : "+ rReturn.result[0]);   //°ª º¹»ç
-		System.out.println("º¯°æ ÈÄ testResultArr[0] : "+testResultArr[0]); 
-		
-		
+		System.out.println("rReturn.result[0] : " + rReturn.result[0]); // 13
+		System.out.println("testResultArr[0] : " + testResultArr[0]); // 13		
+		testResultArr[0] = 30;		
+		System.out.println("ë³€ê²½ í›„ rReturn.result[0] : " + rReturn.result[0]); // 30
+		System.out.println("ë³€ê²½ í›„ testResultArr[0] : " + testResultArr[0]); // 30
 	}
-
 }

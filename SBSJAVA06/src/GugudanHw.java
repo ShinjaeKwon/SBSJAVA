@@ -1,17 +1,17 @@
 
 public class GugudanHw {
-	//짝수단 (2단, 4단, 6단, 8단)의 배열 제작
+	
 	int[] evenGugu(int num){
 		
 		int result[] = new int[9];
 		for(int i=0; i<result.length; i++){
-			result[i] = num * (i+2);
+			result[i] = num * (i+1);
 		}
 		
 		return result;
 	}
 	
-	//홀수단(3단, 5단, 7단, 9단)의 배열 제작
+	
 	int[] oddGugu(int num){
 		int result[] = new int[9];
 		int i=0;
@@ -22,10 +22,10 @@ public class GugudanHw {
 		return result;
 	}
 	
-	//만들어진 구구단 배열 출력
+	
 	void printGugu(int[] gugudanArr){
-		for(int i = 0; i<gugudanArr.length;i++){
-			if(i%2 ==0 ) System.out.println(gugudanArr[i]);
+		for(int i = gugudanArr.length; i>0;i--){
+			if(i%2 == 0) System.out.println("gugudanArr[ "+i+" ] : "+gugudanArr[i]);
 		}
 	}
 }

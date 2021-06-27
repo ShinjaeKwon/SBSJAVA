@@ -1,17 +1,20 @@
-
 public class PrimitiveParameterTest {
-
+	
 	public static void main(String[] args) {
+		
 		Data myData = new Data();
 		myData.num = 10;
-		System.out.println("main()¾ÈÀÇ myData.num : "+myData.num );
-
+		
+		System.out.println("main() ì•ˆì˜ myData.num : " + myData.num); // 10
+		
 		PrimitiveParameterTest.change(myData.num);
-		System.out.println("change() »ç¿ë ÈÄ main() ¾ÈÀÇ myDaya.num : " + myData.num);
+		System.out.println("change() ì‚¬ìš© í›„ main() ì•ˆì˜ myData.num : " + myData.num); // 10
 	}
-	public static void change(int localNum){
+	
+	public static void change (int localNum) {
+		                       	// localNum = myData.num
+								// localNum = 10
 		localNum = 1000;
-		System.out.println("change() ³»ºÎ localNum : "+ localNum);
+		System.out.println("change() ë‚´ë¶€ localNum : " + localNum); // 1000
 	}
-
 }

@@ -1,18 +1,18 @@
-
 public class StringTest01 {
 
 	public static void main(String[] args) {
-		
-		String str = "¾È³ç!";
+		String str = "ì•ˆë…•!";
 		System.out.println(str);
-		// "¿µÈñ¾ß ¾È³ç!" ÇÏ°í Ã¶¼ö°¡ ¸»Çß½À´Ï´Ù.
-		String str2 = "\"¿µÈñ¾ß ¾È³ç!\" ÇÏ°í Ã¶¼ö°¡ ¸»Çß½À´Ï´Ù.";
+		// "ì˜í¬ì•¼ ì•ˆë…•!" í•˜ê³  ì² ìˆ˜ê°€ ë§í–ˆìŠµë‹ˆë‹¤.
+		String str2 = "\"ì˜í¬ì•¼ ì•ˆë…•!\" í•˜ê³  ì² ìˆ˜ê°€ ë§í–ˆìŠµë‹ˆë‹¤.";
 		System.out.println(str2);
 		
-		// java ¼³Ä¡ °æ·Î´Â C:\Program Files\Java\ ÀÌ´Ù.
-		String str3="java ¼³Ä¡ °æ·Î´Â C:\\Program Files\\Java\\ ÀÌ´Ù.";
+		// java ì„¤ì¹˜ ê²½ë¡œëŠ” C:\Program Files\Java\ ì´ë‹¤.
+		String str3 = "java ì„¤ì¹˜ ê²½ë¡œëŠ” C:\\Program Files\\Java\\ ì´ë‹¤.";
 		System.out.println(str3);
-
+		// java ì„¤ì¹˜ ê²½ë¡œëŠ” "C:\\Program Files\\Java\\" ì´ë‹¤.
+		String str4 = "java ì„¤ì¹˜ ê²½ë¡œëŠ” \"C:\\\\Program Files\\\\Java\\\\\" ì´ë‹¤.";
+		System.out.println(str4);
 	}
 
 }
